@@ -1,0 +1,957 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0047)https://ocw.cs.pub.ro/courses/iocla/teme/tema-3 -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>
+    Tema 3  - POLI Cat Invasion    [CS Open CourseWare]
+  </title>
+
+  <meta name="generator" content="DokuWiki">
+<meta name="robots" content="index,follow">
+<meta name="date" content="2022-05-26T10:08:30+0300">
+<meta name="keywords" content="iocla,teme,tema-3">
+<link rel="search" type="application/opensearchdescription+xml" href="https://ocw.cs.pub.ro/courses/lib/exe/opensearch.php" title="CS Open CourseWare">
+<link rel="start" href="https://ocw.cs.pub.ro/courses/">
+<link rel="alternate" type="application/rss+xml" title="Recent Changes" href="https://ocw.cs.pub.ro/courses/feed.php">
+<link rel="alternate" type="application/rss+xml" title="Current Namespace" href="https://ocw.cs.pub.ro/courses/feed.php?mode=list&amp;ns=iocla:teme">
+<link rel="alternate" type="text/html" title="Plain HTML" href="https://ocw.cs.pub.ro/courses/_export/xhtml/iocla/teme/tema-3">
+<link rel="canonical" href="http://ocw.cs.pub.ro/courses/iocla/teme/tema-3">
+<link rel="stylesheet" type="text/css" href="./tema3_files/css.php">
+<script type="text/javascript">/*<![CDATA[*/var NS='iocla:teme';var JSINFO = {"id":"iocla:teme:tema-3","namespace":"iocla:teme","isadmin":0,"isauth":0};
+/*!]]>*/</script>
+<script type="text/javascript" charset="utf-8" src="./tema3_files/js.php"></script>
+<script type="text/x-mathjax-config;executed=true">/*<![CDATA[*/MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+        displayMath: [ ["$$","$$"], ["\\[","\\]"] ],
+        processEscapes: true
+    }
+});
+/*!]]>*/</script>
+<script src="./tema3_files/MathJax.js" id=""></script>
+<script type="text/javascript">/*<![CDATA[*/
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+		  
+/*!]]>*/</script><script src="./tema3_files/ga.js" type="text/javascript"></script>
+<script type="text/javascript">/*<![CDATA[*/
+var pageTracker = _gat._getTracker("UA-38383934-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+		  
+/*!]]>*/</script>
+
+  <link rel="shortcut icon" href="https://ocw.cs.pub.ro/courses/lib/tpl/arctic/images/favicon.ico">
+
+  
+<style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+<body data-new-gr-c-s-check-loaded="14.1063.0" data-gr-ext-installed=""><div id="MathJax_Message" style="display: none;"></div>
+<div id="wrapper" class="show">
+  <div class="dokuwiki">
+
+    
+    <div class="stylehead">
+      <div class="header">
+        <div class="pagename">
+          <a href="https://ocw.cs.pub.ro/courses/iocla/"><img height="70" src="./tema3_files/sigla_iocla.png"> </a>        </div>
+        <div class="logo">
+          <a style="color: #AAA !important;" href="https://ocw.cs.pub.ro/courses/">Open CourseWare</a>        </div>
+      </div>
+    
+       
+      <div class="breadcrumbs">
+              </div>
+      
+            </div>
+
+                  <div class="bar" id="bar__top">
+        <div class="bar-left">
+                  </div>
+        <div class="bar-right">
+          <a href="https://ocw.cs.pub.ro/courses/iocla/teme/tema-3?do=recent" class="action recent" accesskey="r" rel="nofollow" title="Recent changes [R]">Recent changes</a><a href="https://ocw.cs.pub.ro/courses/iocla/teme/tema-3?do=login&amp;sectok=b25d4ee025cbdc9c5d578ec3fc83f240" class="action login" rel="nofollow" title="Login">Login</a>        </div>
+    </div>
+        
+    
+    
+    
+              <div class="left_page">
+          
+<h1 class="sectionedit1" id="tema_3_-_poli_cat_invasion">Tema 3  - POLI Cat Invasion</h1>
+<div class="level1">
+<ul>
+<li class="level1"><div class="li"> Deadline: 31.05.2022</div>
+</li>
+<li class="level1"><div class="li"> Data publicării: 11.05.2022</div>
+</li>
+<li class="level1"><div class="li"> Responsabili:</div>
+<ul>
+<li class="level3"><div class="li"> <a href="mailto:ilinca.strutu@gmail.com" class="mail" title="ilinca.strutu@gmail.com"> Ilinca Struțu         </a></div>
+</li>
+<li class="level3"><div class="li"> <a href="mailto:grecubogdan@hotmail.com" class="mail" title="grecubogdan@hotmail.com"> Bogdan Grecu          </a></div>
+</li>
+<li class="level3"><div class="li"> <a href="mailto:cristianvijelie@gmail.com" class="mail" title="cristianvijelie@gmail.com"> Cristian Vijelie      </a></div>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> Actualizări:</div>
+<ul>
+<li class="level2"><div class="li"> 11.05.2022 - postare temă</div>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+<h2 class="sectionedit2" id="enunt">Enunț</h2>
+<div class="level2">
+
+<p>
+Sursee și prietenii ei au reușit, cu ajutorul vostru, să cucerească Facultatea de Automatică și Calculatoare. Noua lor misiune este să conducă tot campusul și să traverseze Dambovița ca să ajungă în Regie. Noii membrii ai echiei, Luna și Mushu, vor să apeleze la cunoștintele voastre în limbaj de asamblare.
+</p>
+
+</div>
+
+<h3 class="sectionedit3" id="task-ul_1_-_noduri_25p">Task-ul 1 - Noduri (25p)</h3>
+<div class="level3">
+
+<p>
+Sursee dorește să găseasca drumul până în Rectorat ca să vadă si ea vestitul OZN. Ea știe prin ce clădiri trebuie să treacă dar lista a fost amestecată. Ajutați-o să ordoneze lista prin conectarea elementelor care inițial erau alăturate.
+</p>
+
+<p>
+Trebuie să implementați funcția cu semnătura <code>struct node* sort(int n, struct node* node);</code> din fișierul task1.asm, care “leagă” nodurile din listă în ordine crescătoare.
+Funcția primește numărul de noduri și adresa vectorului și întoarce adresa primului nod din lista rezultată.
+</p>
+
+<p>
+Structura unui nod este:
+</p>
+<pre class="code">  struct node {
+      int val;
+      struct node* next;
+  };</pre>
+
+<p>
+și, inițial, câmpul <strong>next</strong> este setat la <strong>NULL</strong>.
+</p>
+
+<p>
+Antetul funcției este: 
+</p>
+<pre class="code c"> <span class="kw4">struct</span> node<span class="sy0">*</span> sort<span class="br0">(</span><span class="kw4">int</span> n<span class="sy0">,</span> <span class="kw4">struct</span> node<span class="sy0">*</span> node<span class="br0">)</span><span class="sy0">;</span> </pre>
+
+<p>
+Semnificația argumentelor este:
+</p>
+<ul>
+<li class="level1"><div class="li"> <strong>n</strong> numărul de noduri</div>
+</li>
+<li class="level1"><div class="li"> <strong>node</strong> adresa vectorului ce trebuie sortat</div>
+</li>
+</ul>
+
+<p>
+Funcția returneaza adresa primului nod din lista ordonată.
+</p>
+
+</div>
+
+<h4 id="precizari">Precizări:</h4>
+<div class="level4">
+<ul>
+<li class="level1"><div class="li"> n &gt;= 1</div>
+</li>
+<li class="level1"><div class="li"> secvența conține numere consecutive distincte începand cu 1 (ex: 1 2 3 …)</div>
+</li>
+<li class="level1"><div class="li"> structura vectorulului NU trebuie modificată (interschimbarea nodurilor este interzisă)</div>
+</li>
+<li class="level1"><div class="li"> sortarea trebuie facută in-place</div>
+</li>
+<li class="level1"><div class="li"> este permisă folosirea unor structuri auxiliare, atâta timp cât, nodurile listei rezultate sunt cele din vectorul inițial</div>
+</li>
+<li class="level1"><div class="li"> NU este permisă folosirea funcției <strong>qsort</strong> din libc</div>
+</li>
+</ul>
+
+</div>
+
+<h4 id="exemplu">Exemplu</h4>
+<div class="level4">
+
+<p>
+Inițial:
+</p>
+<div class="table sectionedit4"><table class="inline">
+	<tbody><tr class="row0">
+		<th class="col0 leftalign"> Adresă    </th><th class="col1 leftalign"> Valoare   </th><th class="col2 leftalign"> Next      </th>
+	</tr>
+	<tr class="row1">
+		<td class="col0 leftalign"> 0x32      </td><td class="col1 leftalign"> 2         </td><td class="col2 leftalign"> NULL      </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0 leftalign"> 0x3A      </td><td class="col1 leftalign"> 1         </td><td class="col2 leftalign"> NULL      </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0 leftalign"> 0x42      </td><td class="col1 leftalign"> 3         </td><td class="col2 leftalign"> NULL      </td>
+	</tr>
+</tbody></table></div>
+
+<p>
+Apelul funcției <strong>sort</strong> întoarce <strong>0x3A</strong> (adresa nodului cu valoarea 1) și vectorul va arăta astfel:
+</p>
+<div class="table sectionedit5"><table class="inline">
+	<tbody><tr class="row0">
+		<th class="col0 leftalign"> Adresă    </th><th class="col1 leftalign"> Valoare   </th><th class="col2 leftalign"> Next      </th>
+	</tr>
+	<tr class="row1">
+		<td class="col0 leftalign"> 0x32      </td><td class="col1 leftalign"> 2         </td><td class="col2 leftalign"> 0x42      </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0 leftalign"> 0x3A      </td><td class="col1 leftalign"> 1         </td><td class="col2 leftalign"> 0x32      </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0 leftalign"> 0x42      </td><td class="col1 leftalign"> 3         </td><td class="col2 leftalign"> NULL      </td>
+	</tr>
+</tbody></table></div>
+
+<p>
+</p><p></p><div class="notetip">
+Pentru implementarea sortării vă puteți inspira din <a href="https://www.geeksforgeeks.org/selection-sort/" class="urlextern" title="https://www.geeksforgeeks.org/selection-sort/" rel="nofollow"> Selection Sort</a>
+
+</div><p></p>
+<p></p>
+
+<p>
+
+<a style="color: white; font-weight: bold;" href="https://imgur.com/a/2O4h25j">Sursee va saluta :))</a>
+
+</p>
+
+</div>
+
+<h3 class="sectionedit6" id="task-ul_2_-_masina_cu_stiva_25p">Task-ul 2 - Mașina cu Stivă (25p)</h3>
+<div class="level3">
+
+<p>
+Mushu trebuie să ajungă la Leu, dar este împiedicat de portarul cel rău de la Precis. Acesta îi pune în față o <a href="https://en.wikipedia.org/wiki/Stack_machine" class="urlextern" title="https://en.wikipedia.org/wiki/Stack_machine" rel="nofollow"> Mașină cu stivă </a>, adică o mașina care știe să folosească doar stiva, prin instrucțiuni de tip <strong>push</strong> și <strong>pop</strong>, pentru a lucra cu memoria. Provocarea lui Mushu este să implementeze 2 funcții pe această mașină:
+</p>
+
+</div>
+
+<h4 id="cmmmc">CMMMC</h4>
+<div class="level4">
+
+<p>
+Prima funcție este <code>int cmmmc(int a, int b)</code>, care calculează cel mai mic multiplu comun a 2 numere, date ca parametru.
+</p>
+
+<p>
+</p><p></p><div class="noteimportant">
+Se garantează că rezultatul înmulțirii lui a și b încape pe 4 bytes
+
+</div><p></p>
+<p></p>
+
+<p>
+Antetul funcției este:
+</p>
+<pre class="code c"> <span class="kw4">int</span> cmmmc<span class="br0">(</span><span class="kw4">int</span> a<span class="sy0">,</span> <span class="kw4">int</span> b<span class="br0">)</span><span class="sy0">;</span> </pre>
+
+<p>
+Cele două argumente sunt numerele cărora trebuie să le aflăm cel mai mic multiplu comun.
+</p>
+
+<p>
+Funcția returneaza cel mai mic multiplu comun al celor două numere.
+</p>
+
+</div>
+
+<h4 id="paranteze">Paranteze</h4>
+<div class="level4">
+
+<p>
+A doua funcție este <code>int par(int str_length, char *str)</code>, care verifică daca o secvență de paranteze este corectă. Aceasta primește un șir care contine <strong>doar paranteze rotunde</strong> si lungimea șirului, și intoarce 1, dacă secvența e corectă, sau 0, dacă secvența e greșită.
+</p>
+
+<p>
+Antetul funcției este:
+</p>
+<pre class="code c"> <span class="kw4">int</span> par<span class="br0">(</span><span class="kw4">int</span> str_length<span class="sy0">,</span> <span class="kw4">char</span> <span class="sy0">*</span>str<span class="br0">)</span><span class="sy0">;</span> </pre>
+
+<p>
+Semnificația argumentelor este:
+</p>
+<ul>
+<li class="level1"><div class="li"> <strong>str_length</strong> numărul de noduri</div>
+</li>
+<li class="level1"><div class="li"> <strong>str</strong> adresa șirului de paranteze</div>
+</li>
+</ul>
+
+<p>
+Funcția returneaza 0 daca parantezarea nu este corectă și 1 daca parantezarea e corectă.
+</p>
+
+</div>
+
+<h5 id="exemplu1">Exemplu</h5>
+<div class="level5">
+<ul>
+<li class="level1"><div class="li"> Pentru secvența ((()())(())), rezultatul va fi 1</div>
+</li>
+<li class="level1"><div class="li"> Pentru secvența (())((, rezultatul va fi 0</div>
+</li>
+</ul>
+
+<p>
+</p><p></p><div class="notewarning">Nu aveti voie sa folositi intructiunile din familia mov (mov, cmov, stos, lods, etc), leave si enter. Toate operatiile de transfer din si in memorie / registre trebuie realizate folosind <strong>push</strong> si <strong>pop</strong>
+</div><p></p>
+<p></p>
+
+<p>
+
+<a style="color: white; font-weight: bold;" href="https://imgur.com/a/VTluNvE">Lui Mushu nu ii plac temele</a>
+
+</p>
+
+</div>
+
+<h3 class="sectionedit7" id="task-ul_3_-_sortare_de_cuvinte_25p">Task-ul 3 - Sortare de cuvinte (25p)</h3>
+<div class="level3">
+
+<p>
+Luna a mers împreună cu Sursee până în Rectorat dar acum trebuie sa ajungă în Regie. Luna are de completat un rebus folosind cuvintele unui text și vă roagă să o ajutați prin a sorta cuvintele în funcție de lungime ca să îi fie mai ușor. 
+</p>
+
+<p>
+Pentru acest task veți avea de separat un text în cuvinte dupa niște delimitatori și, după aceea, să sortați aceste cuvinte folosind funcția qsort. Sortarea se va face întâi după lungimea cuvintelor și în cazul egalitații se va sorta lexicografic.
+</p>
+
+<p>
+Va trebui să implementați 2 funcții cu semnăturile <code>void get_words(char *s, char **words, int number_of_words);</code> și <code>void sort(char **words, int number_of_words, int size);</code> din fișierul task3.asm.
+</p>
+
+<p>
+</p><p></p><div class="noteimportant">Scopul task-ului acesta este să folosiți funcții din biblioteca standard C. Dacă există ceva în libc ce va poate ajuta, folosiți cu incredere!
+</div><p></p>
+<p></p>
+
+<p>
+Antetul primei funcții este:
+</p>
+<pre class="code c"> <span class="kw4">void</span> get_words<span class="br0">(</span><span class="kw4">char</span> <span class="sy0">*</span>s<span class="sy0">,</span> <span class="kw4">char</span> <span class="sy0">**</span>words<span class="sy0">,</span> <span class="kw4">int</span> number_of_words<span class="br0">)</span><span class="sy0">;</span> </pre>
+
+<p>
+Semnificația argumentelor este:
+</p>
+<ul>
+<li class="level1"><div class="li"> <strong>s</strong> textul din care extragem cuvintele</div>
+</li>
+<li class="level1"><div class="li"> <strong>words</strong> vectorul de string-uri în care se salvează cuvintele găsite</div>
+</li>
+<li class="level1"><div class="li"> <strong>number_of_words</strong> numărul de cuvinte</div>
+</li>
+</ul>
+
+<p>
+Atenție, funcția <strong>nu</strong> returnează nimic, cuvintele se salveaza in vectorul words!
+</p>
+
+<p>
+Antetul celei de-a doua funcții este:
+</p>
+<pre class="code c"> <span class="kw4">void</span> sort<span class="br0">(</span><span class="kw4">char</span> <span class="sy0">**</span>words<span class="sy0">,</span> <span class="kw4">int</span> number_of_words<span class="sy0">,</span> <span class="kw4">int</span> size<span class="br0">)</span><span class="sy0">;</span> </pre>
+
+<p>
+Semnificația argumentelor este:
+</p>
+<ul>
+<li class="level1"><div class="li"> <strong>words</strong> vectorul de cuvinte ce trebuie sortat</div>
+</li>
+<li class="level1"><div class="li"> <strong>number_of_words</strong> numărul de cuvinte</div>
+</li>
+<li class="level1"><div class="li"> <strong>size</strong> dimensiunea unui cuvânt</div>
+</li>
+</ul>
+
+<p>
+Atenție, funcția <strong>nu</strong> returnează nimic, sortarea se face in-place!
+</p>
+
+</div>
+
+<h4 id="precizari1">Precizări</h4>
+<div class="level4">
+<ul>
+<li class="level1"><div class="li"> lungimea textului este mai mica decat 1000;</div>
+</li>
+<li class="level1"><div class="li"> vectorul de cuvinte va avea maxim 100 de cuvine a 100 de caractere fiecare;</div>
+</li>
+<li class="level1"><div class="li"> delimitatorii pe care trebuie sa ii luati in calcul sunt: spatiu( ), virgula(,), punct(.), endline (\n)</div>
+</li>
+<li class="level1"><div class="li"> nu aveti voie sa folositi alta metoda de sortare in afara de <strong>qsort</strong>. In cazul in care veti folosi alta metoda punctajul pe acest task se va pierde;</div>
+</li>
+</ul>
+
+</div>
+
+<h4 id="exemplu2">Exemplu</h4>
+<div class="level4">
+<pre class="code">  number_of_words: 9
+  s: "Ana are 27 de mere, si 32 de pere."
+  dupa apelul get_words: words = ["Ana", "are", "27", "de", "mere", "si", "32", "de", "pere"]
+  dupa apelul sort: words = ["27", "32", "de", "de", "si", "Ana", "are", "mere", "pere"]</pre>
+
+<p>
+</p><p></p><div class="notetip">
+Pentru mai multe informatii despre qsort puteti accesa linkul: <a href="https://man7.org/linux/man-pages/man3/qsort.3.html" class="urlextern" title="https://man7.org/linux/man-pages/man3/qsort.3.html" rel="nofollow"> qsort </a>
+
+</div><p></p>
+<p></p>
+
+<p>
+
+<a style="color: white; font-weight: bold;" href="https://imgur.com/a/gDsOTHY">Luna va felicita ca ati ajuns pana aici</a>
+
+</p>
+
+</div>
+
+<h3 class="sectionedit8" id="task-ul_4_-_cpuid_15p">Task-ul 4 - CPUID (15p)</h3>
+<div class="level3">
+
+<p>
+Acum că pisicile au cucerit toată Universitatea Politehnică, vor să se relaxeze aflând câteva detalii despre procesoare.
+</p>
+
+<p>
+<code>cpuid</code> este o instrucțiune specială a procesoarelor care folosesc arhitectura x86, sau derivate, care permite aflarea unor informații despre procesorul pe care se execută această instrucțiune. 
+</p>
+
+<p>
+Instrucțiunea cpuid nu primește parametri, ci se execută în funcție de conținutul registrului eax și, în anumite situații, a registrului ecx. Informațiile date ca răspuns sunt stocate în registrele eax, ebx, ecx, edx. Semnificația rezultatelor este documentată în specificația  producătorilor de procesoare x86, <a href="https://web.archive.org/web/20120625025623/http://www.intel.com/Assets/PDF/appnote/241618.pdf" class="urlextern" title="https://web.archive.org/web/20120625025623/http://www.intel.com/Assets/PDF/appnote/241618.pdf" rel="nofollow"> Intel</a> si <a href="https://www.amd.com/system/files/TechDocs/25481.pdf" class="urlextern" title="https://www.amd.com/system/files/TechDocs/25481.pdf" rel="nofollow"> AMD</a>.
+</p>
+
+<p>
+Vi se cere sa aflați, folosind cpuid, următoarele informații despre procesorul vostru:
+</p>
+<ul>
+<li class="level1"><div class="li"> Manufacturer ID-ul (4p)</div>
+</li>
+<li class="level1"><div class="li"> dacă procesorul folosește <a href="https://en.wikipedia.org/wiki/Advanced_Programmable_Interrupt_Controller" class="urlextern" title="https://en.wikipedia.org/wiki/Advanced_Programmable_Interrupt_Controller" rel="nofollow"> APIC</a> (1p)</div>
+</li>
+<li class="level1"><div class="li"> dacă este suportata instrucțiunea <a href="https://en.wikipedia.org/wiki/RDRAND" class="urlextern" title="https://en.wikipedia.org/wiki/RDRAND" rel="nofollow"> RDRAND</a> (1p)</div>
+</li>
+<li class="level1"><div class="li"> în cazul în care procesorul este de tip <em>Intel</em>, dacă suportă setul de instrucțiuni <a href="https://en.wikipedia.org/wiki/Intel_MPX" class="urlextern" title="https://en.wikipedia.org/wiki/Intel_MPX" rel="nofollow"> MPX</a> (2p)</div>
+</li>
+<li class="level1"><div class="li"> în cazul în care procesorul este de tip <em>AMD</em>, dacă suportă setul de instrucțiuni <a href="https://en.wikipedia.org/wiki/X86_virtualization#AMD_virtualization_.28AMD-V.29" class="urlextern" title="https://en.wikipedia.org/wiki/X86_virtualization#AMD_virtualization_.28AMD-V.29" rel="nofollow"> SVM</a> (3p)</div>
+</li>
+<li class="level1"><div class="li"> dimensiunea liniei de cache de nivel 2 (4p)</div>
+</li>
+<li class="level1"><div class="li"> dimensiunea cache-ului de nivel 2, <strong>pentru un singur nucleu</strong> (bonus - 5p)</div>
+</li>
+</ul>
+
+<p>
+Implementarea se va realiza în fișierul `task4.asm`.
+</p>
+
+</div>
+
+<h4 id="precizari2">Precizări</h4>
+<div class="level4">
+<ul>
+<li class="level1"><div class="li"> Checker-ul va verifica ce tip de procesor este prezent și va verifica output-ul funcțiilor voastre in funcție de prezența componentelor cerute pe sistem (dacă procesorul vostru este Intel și nu are MPX, se va aștepta ca rezultatul pentru MPX sa fie 0)</div>
+</li>
+<li class="level1"><div class="li"> Checker-ul va emula celălalt procesor, cu <strong>toate componentele cerute</strong>, folosind <code>qemu-i386</code>.</div>
+</li>
+<li class="level1"><div class="li"> Implementarea trebuie să poată verifica și componentele specifice Intel, și cele specifice AMD, în funcție de ce tip de procesor e detectat.</div>
+</li>
+<li class="level1"><div class="li"> Informatii despre cache-ul de nivelul 2 se pot obtine folosind EAX=0x80000006, EAX=0x2 sau EAX=0x04. Folosind EAX=0x80000006 se poate afisa o dimensiune de maxim 512KB. Pentru dimensiuni mai mari, trebuie folosit EAX=0x2, care implica parsarea registrelor EAX, EBX, ECX, EDX, astfel: AL indica e cate ori trebuie apelat CPUID cu EAX=0x2, pentru a obtine date valide. Bit-ul 31 din fiecare registru indica daca contine date valide (valoarea 0) sau nu (valoarea 1). Daca un registru contine date valide, acesta va contine cate o valoare pe un byte, cu o anumita specificatie. Specificatia fiecarui byte poate fi gasita <a href="https://c9x.me/x86/html/file_module_x86_id_45.html" class="urlextern" title="https://c9x.me/x86/html/file_module_x86_id_45.html" rel="nofollow"> aici </a>, la sectiunea <strong>INPUT EAX = 2:</strong>.</div>
+</li>
+<li class="level1"><div class="li"> Pentru EAX = 0x4, puteti consulta <a href="https://www.intel.com/content/dam/www/public/us/en/documents/manuals/64-ia-32-architectures-software-developer-vol-2a-manual.pdf" class="urlextern" title="https://www.intel.com/content/dam/www/public/us/en/documents/manuals/64-ia-32-architectures-software-developer-vol-2a-manual.pdf" rel="nofollow"> documentatia Intel</a>.</div>
+</li>
+<li class="level1"><div class="li"> <strong>Pentru linia de cache e suficent EAX = 0x80000006</strong></div>
+</li>
+</ul>
+
+</div>
+
+<h3 class="sectionedit9" id="task-uri_bonus">Task-uri bonus</h3>
+<div class="level3">
+
+<p>
+Ca task-uri bonus, aveți de ales din următoarele:
+</p>
+<ul>
+<li class="level1"><div class="li"> Assembly pe 64 de biti (5p)</div>
+</li>
+<li class="level1"><div class="li"> Sintaxa AT&amp;T (10p)</div>
+</li>
+<li class="level1"><div class="li"> Instructiuni vectoriale (15p)</div>
+</li>
+<li class="level1"><div class="li"> Instructiuni speciale: RDRAND, RDTSC (10+p)</div>
+</li>
+<li class="level1"><div class="li"> Apeluri de sistem (10p)</div>
+</li>
+<li class="level1"><div class="li"> Floating point (15p)</div>
+</li>
+<li class="level1"><div class="li"> Altele - vor fi adaugate pe parcurs</div>
+</li>
+</ul>
+
+<p>
+
+<a style="color: white; font-weight: bold;">Tunetele s-au oprit, au fost inlocuite de lene</a>
+
+</p>
+
+<p>
+</p><p></p><div class="noteimportant">Cerințele task-urilor bonus și punctarea lor se pot găsi în fișierele task_*.md, din cadrul folderului fiecarui task.
+</div><p></p>
+<p></p>
+
+</div>
+
+<h2 class="sectionedit10" id="trimitere_si_notare">Trimitere și notare</h2>
+<div class="level2">
+
+<p>
+Temele vor fi incarcate pe platforma de <a href="https://gitlab.cs.pub.ro/iocla/tema-3" class="urlextern" title="https://gitlab.cs.pub.ro/iocla/tema-3" rel="nofollow"> Gitlab</a> a facultatii sau pe platforma <a href="https://examen-test.upb.ro/mod/assign/view.php?id=40" class="urlextern" title="https://examen-test.upb.ro/mod/assign/view.php?id=40" rel="nofollow"> Moodle</a> experimentala.
+</p>
+
+<p>
+Pentru incarcarea pe Gitlab, va trebui sa faceti un fork al <a href="https://gitlab.cs.pub.ro/iocla/tema-3" class="urlextern" title="https://gitlab.cs.pub.ro/iocla/tema-3" rel="nofollow"> repository-ului</a> temei, pe care veti lucra. Puteti lucra direct pe branch-ul <strong>master</strong> al fork-ului, sau puteti face un nou branch pe fork, apoi sa creati un Pull Request spre <strong>master</strong>. In cazul variantei cu Pull Request, puteti cere review unuia dintre responsabilii temei, pentru a se uita pe cod si a va spune daca exista probleme.
+</p>
+
+<p>
+</p><p></p><div class="noteimportant">Faceti branch-ul pe forkul facut din repository-ul temei. Fork-ul trebuie sa fie privat
+</div><p></p>
+<p></p>
+
+<p>
+In cazul realizarii temei pe Gitlab, fiecare commit va duce la verificarea automata a temei.
+</p>
+
+<p>
+</p><p></p><div class="notewarning">Puteti cere review pe cod pana la inceputul ultimei saptamani
+</div><p></p>
+<p></p>
+
+<p>
+</p><p></p><div class="notewarning">Review-ul nu va include si detalii depsre cum trebuie sa implementati cerintele. Va viza, in principal, coding style-ul
+</div><p></p>
+<p></p>
+
+<p>
+A doua optiune este sa folositi checker-ul local, folosind comanda <code>sudo ./local.sh</code>. Asta va va reproduce mediul de testare de pe Gitlab pe masina voastra, si va verifica tema. Apoi, puteti incarca tema pe <a href="https://examen-test.upb.ro/mod/assign/view.php?id=40" class="urlextern" title="https://examen-test.upb.ro/mod/assign/view.php?id=40" rel="nofollow"> Moodle</a>, sub forma de arhiva .zip. Tema va fi apoi verificata.
+</p>
+
+<p>
+</p><p></p><div class="noteimportant">Din folderul temei (tema3/), executand comanda <code>make zip</code>, se va crea arhiva cu structura asteptata de checker. Fisierul README, daca este adaugat, trebuie sa fie scris in Markdown si sa aiba extensia .md
+</div><p></p>
+<p></p>
+
+<p>
+</p><p></p><div class="notetip">Puteti gasi procesul de rezolvare si incarcare al temelor <a href="https://github.com/Jokeswar/vmchecker-next/wiki/Student-Handbook" class="urlextern" title="https://github.com/Jokeswar/vmchecker-next/wiki/Student-Handbook" rel="nofollow"> aici</a>
+</div><p></p>
+<p></p>
+
+<p>
+Punctajul final acordat pe o temă este compus din:
+</p>
+<ul>
+<li class="level1"><div class="li"> punctajul obținut prin testarea automată de pe vmchecker - 90p</div>
+</li>
+<li class="level1"><div class="li"> coding style - 10p</div>
+</li>
+<li class="level1"><div class="li"> bonus - maxim 50p</div>
+</li>
+</ul>
+
+<p>
+</p><p></p><div class="noteclassic"> Punctajul maxim este 150p 
+</div><p></p>
+<p></p>
+
+<p>
+Rezultatul rularii checker-ului se poate vedea pe Moodle. Tot acolo va aparea si corectarea facuta de catre asistenti.
+</p>
+
+<p>
+</p><p></p><div class="notetip">Fisierul README.md este optional. Va incurajam sa detaliati implementarile folosind comentarii punctuale in cod (nu comentati fiecare linie, ci blocuri de cod). Scrieti in README daca considerati necesar sa detaliati mai mult implementarea sau daca aveti feedback legat de tema
+</div><p></p>
+<p></p>
+
+<p>
+</p><p></p><div class="noteclassic">
+Coding style-ul constă în:
+<p></p>
+<ul>
+<li class="level1"><div class="li"> prezența comentariilor în cod</div>
+</li>
+<li class="level1"><div class="li"> scrierea unui cod lizibil</div>
+</li>
+<li class="level1"><div class="li"> indentarea consecventă</div>
+</li>
+<li class="level1"><div class="li"> utilizarea unor nume sugestive pentru label-uri</div>
+</li>
+<li class="level1"><div class="li"> scrierea unor linii de cod/README de maxim 80-100 de caractere</div>
+</li>
+</ul>
+
+<p>
+
+</p></div><p></p>
+<p></p>
+
+<p>
+</p><p></p><div class="noteclassic">
+Pentru detalii despre coding style parcurgeți acest document:
+<a href="http://www.sourceformat.com/pdf/asm-coding-standard-brown.pdf" class="urlextern" title="http://www.sourceformat.com/pdf/asm-coding-standard-brown.pdf" rel="nofollow"> coding style</a>
+
+</div><p></p>
+<p></p>
+
+<p>
+</p><p></p><div class="notewarning">
+Temele care nu trec de procesul de asamblare (build) nu vor fi luate în considerare.
+
+</div><p></p>
+<p></p>
+
+<p>
+</p><p></p><div class="notewarning">
+Vă reamintim să parcurgeți atât secțiunea de <a href="https://ocw.cs.pub.ro/courses/iocla/reguli-notare#depunctari_teme" class="wikilink1" title="iocla:reguli-notare">depunctări</a> cât și <a href="https://ocw.cs.pub.ro/courses/iocla/reguli-notare#realizarea_temelor" class="wikilink1" title="iocla:reguli-notare">regulamentul de realizare a temelor</a>.
+
+</div><p></p>
+<p></p>
+
+</div>
+
+<h2 class="sectionedit11" id="precizari_suplimentare">Precizări suplimentare</h2>
+<div class="level2">
+
+<p>
+</p><p></p><div class="notewarning">Toate task-urile vor fi realizate in limbajul de asamblare x86 (32 de biti), in afara de cazurile cand se specifica explicit alt limbaj.
+</div><p></p>
+<p></p>
+
+</div>
+
+<h2 class="sectionedit12" id="faq">FAQ</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> <strong>Q</strong>: Este permisă utilizarea variabilelor globale?</div>
+<ul>
+<li class="level3"><div class="li"> <strong>A</strong>: Da</div>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+<h2 class="sectionedit13" id="resurse">Resurse</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/reguli-notare" class="urlextern" title="https://ocw.cs.pub.ro/courses/iocla/reguli-notare" rel="nofollow"> Reguli si notare </a></div>
+</li>
+</ul>
+
+</div>
+
+        </div>
+        <div class="right_sidebar">
+          <form action="https://ocw.cs.pub.ro/courses/start" accept-charset="utf-8" class="search" id="dw__search" method="get"><div class="no"><input type="hidden" name="do" value="search"><input type="text" id="qsearch__in" accesskey="f" name="id" class="edit" title="[F]"><input type="submit" value="Search" class="button" title="Search"><div id="qsearch__out" class="ajax_qsearch JSpopup"></div></div></form>          <div class="namespace_sidebar sidebar_box">
+
+
+
+<div><div id="nojs_indexmenu_193786570662b2153e5bf27" data-jsajax="%26skipfile%3D%252B/iocla%253A%2528sidebar%257Cindex%257Cdraft-reguli-si-notare%257CCatalog%2529/" class="indexmenu_nojs">
+
+<ul class="idx">
+<li class="level1"><div class="li"><a href="https://ocw.cs.pub.ro/courses/iocla/anunturi" class="wikilink1" title="iocla:anunturi">Anunțuri</a></div></li>
+<li class="level1"><div class="li"><a href="https://ocw.cs.pub.ro/courses/iocla/bune-practici" class="wikilink1" title="iocla:bune-practici">Bune practici</a></div></li>
+<li class="level1"><div class="li"><a href="https://ocw.cs.pub.ro/courses/iocla/calendar" class="wikilink1" title="iocla:calendar">Calendar</a></div></li>
+<li class="level1"><div class="li"><a href="https://ocw.cs.pub.ro/courses/iocla/catalog" class="wikilink1" title="iocla:catalog">Catalog</a></div></li>
+<li class="level1"><div class="li"><a href="https://ocw.cs.pub.ro/courses/iocla/feed" class="wikilink1" title="iocla:feed">Feed RSS</a></div></li>
+<li class="level1"><div class="li"><a href="https://ocw.cs.pub.ro/courses/iocla/need-to-know" class="wikilink1" title="iocla:need-to-know">IOCLA Need to Know</a></div></li>
+<li class="level1"><div class="li"><a href="https://ocw.cs.pub.ro/courses/iocla/reguli-notare" class="wikilink1" title="iocla:reguli-notare">Reguli și notare</a></div></li>
+<li class="level1"><div class="li"><a href="https://ocw.cs.pub.ro/courses/iocla/utile" class="wikilink1" title="iocla:utile">Resurse utile</a></div></li>
+</ul>
+</div></div>
+
+<h1 class="sectionedit1" id="cursuri">Cursuri</h1>
+<div class="level1">
+<ul>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/cursuri/capitol-00" class="wikilink1" title="iocla:cursuri:capitol-00">Capitol 00: Prezentare</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/cursuri/capitol-01" class="wikilink1" title="iocla:cursuri:capitol-01">Capitol 01: Programe și sistemul de calcul</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/cursuri/capitol-02" class="wikilink1" title="iocla:cursuri:capitol-02">Capitol 02: Construirea programelor</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/cursuri/capitol-03" class="wikilink1" title="iocla:cursuri:capitol-03">Capitol 03: Arhitectura sistemului de calcul</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/cursuri/capitol-04" class="wikilink1" title="iocla:cursuri:capitol-04">Capitol 04: Reprezentarea numerelor</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/cursuri/capitol-05" class="wikilink1" title="iocla:cursuri:capitol-05">Capitol 05: Interfața hardware - software x86</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/cursuri/capitol-06" class="wikilink1" title="iocla:cursuri:capitol-06">Capitol 06: Stiva</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/cursuri/capitol-07" class="wikilink1" title="iocla:cursuri:capitol-07">Capitol 07: Funcții</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/cursuri/capitol-08" class="wikilink1" title="iocla:cursuri:capitol-08">Capitol 08: Interfața binară a funcțiilor</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/cursuri/capitol-09" class="wikilink1" title="iocla:cursuri:capitol-09">Capitol 09: Gestiunea bufferelor</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/cursuri/capitol-10" class="wikilink1" title="iocla:cursuri:capitol-10">Capitol 10: Curs ales de titular</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/cursuri/capitol-11" class="wikilink1" title="iocla:cursuri:capitol-11">Capitol 11: Optimizări</a></div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT1 SECTION "Cursuri" [197-1100] -->
+<h1 class="sectionedit2" id="laboratoare">Laboratoare</h1>
+<div class="level1">
+<ul>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/laboratoare/laborator-01" class="wikilink1" title="iocla:laboratoare:laborator-01">Laborator 01: Reprezentarea numerelor, operații pe biți și lucru cu memoria</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/laboratoare/laborator-02" class="wikilink1" title="iocla:laboratoare:laborator-02">Laborator 02: Operații cu memoria. Introducere în GDB</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/laboratoare/laborator-03" class="wikilink1" title="iocla:laboratoare:laborator-03">Laborator 03: Compilare</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/laboratoare/laborator-04" class="wikilink1" title="iocla:laboratoare:laborator-04">Laborator 04: Toolchain</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/laboratoare/laborator-05" class="wikilink1" title="iocla:laboratoare:laborator-05">Laborator 05: Introducere în limbajul de asamblare</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/laboratoare/laborator-06" class="wikilink1" title="iocla:laboratoare:laborator-06">Laborator 06: Rolul registrelor, adresare directă și bazată</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/laboratoare/laborator-07" class="wikilink1" title="iocla:laboratoare:laborator-07">Laborator 07: Date Structurate. Structuri, vectori. Operatii pe siruri</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/laboratoare/laborator-08" class="wikilink1" title="iocla:laboratoare:laborator-08">Laborator 08: Lucrul cu stiva</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/laboratoare/laborator-09" class="wikilink1" title="iocla:laboratoare:laborator-09">Laborator 09: Apeluri de funcții</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/laboratoare/laborator-10" class="wikilink1" title="iocla:laboratoare:laborator-10">Laborator 10: Interactiunea C-assembly</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/laboratoare/laborator-11" class="wikilink1" title="iocla:laboratoare:laborator-11">Laborator 11: Gestiunea bufferelor. Buffer overflow</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/laboratoare/laborator-12" class="wikilink1" title="iocla:laboratoare:laborator-12">Laborator 12: CTF</a></div>
+</li>
+</ul>
+
+<div><div id="nojs_indexmenu_28336635062b2153e60e94" data-jsajax="" class="indexmenu_nojs">
+
+<ul class="idx">
+<li class="level1"><div class="li"><a href="https://ocw.cs.pub.ro/courses/iocla/laboratoare/extra/laborator-arm" class="wikilink1" title="iocla:laboratoare:extra:laborator-arm">Laborator facultativ: ARM assembly</a></div></li>
+</ul>
+</div></div>
+
+</div>
+<!-- EDIT2 SECTION "Laboratoare" [1101-1658] -->
+<h1 class="sectionedit3" id="teme">Teme</h1>
+<div class="level1">
+<ul>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/teme/tema-1" class="wikilink1" title="iocla:teme:tema-1">Tema 1  - Momente disperate</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/teme/tema-2" class="wikilink1" title="iocla:teme:tema-2"> Tema 2 - ACS Cat Invasion</a></div>
+</li>
+<li class="level1"><div class="li"> <span class="curid"><a href="https://ocw.cs.pub.ro/courses/iocla/teme/tema-3" class="wikilink1" title="iocla:teme:tema-3"> Tema 3 - Poli Cat Invasion</a></span></div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT3 SECTION "Teme" [1659-] -->
+</div>
+<div class="toc_sidebar sidebar_box">
+<!-- TOC START -->
+<div id="sb__right__dw__toc">
+<h3 class="toggle">Table of Contents</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="https://ocw.cs.pub.ro/courses/iocla/teme/tema-3#tema_3_-_poli_cat_invasion">Tema 3  - POLI Cat Invasion</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="https://ocw.cs.pub.ro/courses/iocla/teme/tema-3#enunt">Enunț</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="https://ocw.cs.pub.ro/courses/iocla/teme/tema-3#task-ul_1_-_noduri_25p">Task-ul 1 - Noduri (25p)</a></div>
+<ul class="toc">
+<li class="level4"><div class="li"><a href="https://ocw.cs.pub.ro/courses/iocla/teme/tema-3#precizari">Precizări:</a></div></li>
+<li class="level4"><div class="li"><a href="https://ocw.cs.pub.ro/courses/iocla/teme/tema-3#exemplu">Exemplu</a></div></li>
+</ul>
+</li>
+<li class="level3"><div class="li"><a href="https://ocw.cs.pub.ro/courses/iocla/teme/tema-3#task-ul_2_-_masina_cu_stiva_25p">Task-ul 2 - Mașina cu Stivă (25p)</a></div>
+<ul class="toc">
+<li class="level4"><div class="li"><a href="https://ocw.cs.pub.ro/courses/iocla/teme/tema-3#cmmmc">CMMMC</a></div></li>
+<li class="level4"><div class="li"><a href="https://ocw.cs.pub.ro/courses/iocla/teme/tema-3#paranteze">Paranteze</a></div></li>
+</ul>
+</li>
+<li class="level3"><div class="li"><a href="https://ocw.cs.pub.ro/courses/iocla/teme/tema-3#task-ul_3_-_sortare_de_cuvinte_25p">Task-ul 3 - Sortare de cuvinte (25p)</a></div>
+<ul class="toc">
+<li class="level4"><div class="li"><a href="https://ocw.cs.pub.ro/courses/iocla/teme/tema-3#precizari1">Precizări</a></div></li>
+<li class="level4"><div class="li"><a href="https://ocw.cs.pub.ro/courses/iocla/teme/tema-3#exemplu2">Exemplu</a></div></li>
+</ul>
+</li>
+<li class="level3"><div class="li"><a href="https://ocw.cs.pub.ro/courses/iocla/teme/tema-3#task-ul_4_-_cpuid_15p">Task-ul 4 - CPUID (15p)</a></div>
+<ul class="toc">
+<li class="level4"><div class="li"><a href="https://ocw.cs.pub.ro/courses/iocla/teme/tema-3#precizari2">Precizări</a></div></li>
+</ul>
+</li>
+<li class="level3"><div class="li"><a href="https://ocw.cs.pub.ro/courses/iocla/teme/tema-3#task-uri_bonus">Task-uri bonus</a></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><a href="https://ocw.cs.pub.ro/courses/iocla/teme/tema-3#trimitere_si_notare">Trimitere și notare</a></div></li>
+<li class="level2"><div class="li"><a href="https://ocw.cs.pub.ro/courses/iocla/teme/tema-3#precizari_suplimentare">Precizări suplimentare</a></div></li>
+<li class="level2"><div class="li"><a href="https://ocw.cs.pub.ro/courses/iocla/teme/tema-3#faq">FAQ</a></div></li>
+<li class="level2"><div class="li"><a href="https://ocw.cs.pub.ro/courses/iocla/teme/tema-3#resurse">Resurse</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+</div>
+        </div>
+      
+    
+      <div class="stylefoot">
+        <div class="meta">
+          <div class="user">
+                    </div>
+          <div class="doc">
+          iocla/teme/tema-3.txt · Last modified: 2022/05/26 10:08 by cristian.vijelie          </div>
+        </div>
+      </div>
+
+    <div class="clearer"></div>
+
+    
+                <div class="bar" id="bar__bottom">
+      <div class="bar-left">
+        <a href="https://ocw.cs.pub.ro/courses/iocla/teme/tema-3?do=revisions" class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]">Old revisions</a>      </div>
+      <div class="bar-right">
+        <a href="https://ocw.cs.pub.ro/courses/iocla/teme/tema-3?do=media&amp;ns=iocla%3Ateme" class="action media" rel="nofollow" title="Media Manager">Media Manager</a><a href="https://ocw.cs.pub.ro/courses/iocla/teme/tema-3#dokuwiki__top" class="action top" accesskey="t" rel="nofollow" title="Back to top [T]">Back to top</a>      </div>
+    </div>
+    <div class="clearer"></div>
+            
+    <div align="center" class="footerinc">
+  <div class="license"><a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license"><img src="./tema3_files/cc-by-sa.png" alt="CC Attribution-Share Alike 3.0 Unported"></a></div>
+  <a target="_blank" href="http://www.chimeric.de/" title="www.chimeric.de"><img src="./tema3_files/button-chimeric-de.png" width="80" height="15" alt="www.chimeric.de" border="0"></a>
+
+  <a target="_blank" href="http://jigsaw.w3.org/css-validator/check/referer" title="Valid CSS"><img src="./tema3_files/button-css.png" width="80" height="15" alt="Valid CSS" border="0"></a>
+
+  <a target="_blank" href="http://wiki.splitbrain.org/wiki:dokuwiki" title="Driven by DokuWiki"><img src="./tema3_files/button-dw.png" width="80" height="15" alt="Driven by DokuWiki" border="0"></a>
+
+  <a target="_blank" href="http://www.firefox-browser.de/" title="do yourself a favour and use a real browser - get firefox"><img src="./tema3_files/button-firefox.png" width="80" height="15" alt="do yourself a favour and use a real browser - get firefox!!" border="0"></a>
+  
+  <a target="_blank" href="https://ocw.cs.pub.ro/courses/feed.php" title="Recent changes RSS feed"><img src="./tema3_files/button-rss.png" width="80" height="15" alt="Recent changes RSS feed" border="0"></a>
+
+  <a target="_blank" href="http://validator.w3.org/check/referer" title="Valid XHTML 1.0"><img src="./tema3_files/button-xhtml.png" width="80" height="15" alt="Valid XHTML 1.0" border="0"></a>
+</div>
+
+  </div>
+</div>
+
+<div class="no"><img src="./tema3_files/indexer.php" width="2" height="1" alt=""></div>
+
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
